@@ -39,9 +39,11 @@ void check_elf(unsigned char *e_ident)
  */
 void print_header_info(Elf64_Ehdr *header)
 {
+	int index;
+
 	printf("ELF Header:\n");
 	printf(" Magic: ");
-	for (int index = 0; index < EI_NIDENT; index++)
+	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", header->e_ident[index]);
 		if (index == EI_NIDENT - 1)
