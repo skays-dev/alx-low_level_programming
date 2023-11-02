@@ -18,9 +18,6 @@ size_t dlistint_len(const dlistint_t *h)
         /*Increment the element count.*/
         nodes++;
 
-
-
-
         /*Move to the next element.*/
         h = h->next;
     }
